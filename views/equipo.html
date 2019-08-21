@@ -3,16 +3,16 @@
     <h1 class="text-center pt-5 pd-5">El equipo detrás de Dropout Forecast</h1>
     <img src="../img/FROGWARE.png" class="pt-3 pb-3" style="width: 30rem;">
     <div class="row justify-content-md-center text-center">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="false" data-pause=true>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" target="_self">
-                    <span class="fa fa-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
+        <div id="carouselExampleControls" class="carousel slide" data-interval=1000 data-ride="false" data-pause=true>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" target="_self">
+                <span class="fas fa-arrow-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
            
-            <div class="carousel-inner">
-                <div class="carousel-item active">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active" data-interval=1000>
                     <div class="row justify-content-md-center text-center">
-                        <div class="col d-flex justify-content-around" ng-repeat="member in team_members" ng-if="$index < 3">
+                        <div class="col" ng-repeat="member in team_members" ng-if="$index < 3">
                             <div class="card text-center" style="width:18rem;">
                                 <img src="{{'../img/' + member.img}}" class="card-img-top img-thumbnail" alt="Card image">
                                 <div class="card-body">
@@ -38,10 +38,10 @@
                         </div>
                     </div>    
                 </div>
-                <div class="carousel-item">
+                <div class="carousel-item" data-interval=1000>
                     <div class="row justify-content-md-center text-center">
                         <div class="col" ng-repeat="member in team_members" ng-if="$index > 2">
-                            <div class="card text-center" style="width:18rem;">
+                            <div class="card text-center"  ng-class="{ invisible:$index===4}" style="width:18rem;">
                                 <img src="{{'../img/' + member.img}}" class="card-img-top img-thumbnail" alt="Card image">
                                 <div class="card-body">
                                     <div class="card-title">
@@ -64,35 +64,11 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="col" ng-repeat="member in team_members" ng-if="$index == 0">
-                            <div class="card text-center" style="width:18rem;">
-                                <img src="{{'../img/' + member.img}}" class="card-img-top img-thumbnail" alt="Card image">
-                                <div class="card-body">
-                                    <div class="card-title">
-                                        {{member.name}}
-                                    </div>
-                                    <h6 class="card-subtitle mb-2 text-muted">{{member.role}}</h6>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="row">
-                                        <div class="col py-2 px-lg-3">
-                                            <a class="card-a" href={{member.linkedin}}><i class="fab fa-linkedin fa-2x"></i></a>
-                                        </div>
-                                        <div class="col py-2 px-lg-3">
-                                            <a class="card-a" href={{member.github}}><i class="fab fa-github-square fa-2x"></i></a>
-                                        </div>    
-                                        <div class="col py-2 px-lg-3">
-                                            <a class="card-a" href={{member.twitter}}><i class="fab fa-twitter-square fa-2x"></i></a>
-                                        </div>    
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" target="_self">
-                <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                <span class="fas fa-arrow-right" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
         </div>

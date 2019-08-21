@@ -37,6 +37,15 @@ angular.module('web_dropoutforecast').controller('equipoCtrl',['$scope',function
             img:'mauro.jpg'
         },
         {
+            name:'Felipe Vega',
+            role:'Machine Learning Engineer - Backend Developer',
+            description:'niño modelo',
+            linkedin:'https://www.linkedin.com/in/felipe-vega-valencia-1b2a33181/',
+            github:'https://github.com/Umauro',
+            twitter:'https://twitter.com/PipexxGfx',
+            img:'mauro.jpg'
+        },
+        {
             name:'Victor Zavala',
             role:'Jefe Marketing - Frontend Developer',
             description:'niño frontend',
