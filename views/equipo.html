@@ -1,1 +1,30 @@
-Vista Equipo de desarrollo
+
+<div class="container">
+    <h1 class="text-center pt-5">El equipo detrás de Dropout Forecast</h1>
+    <div class="row justify-content-md-center text-center">
+        <div class="col pt-5 d-flex justify-content-around" ng-repeat="member in team_members">
+            <div class="card text-center" style="width:18rem;">
+                <img src="{{'../img/' + member.img}}" class="card-img-top img-thumbnail" alt="Card image">
+                <div class="card-body">
+                    <div class="card-title">
+                        {{member.name}}
+                    </div>
+                    <h6 class="card-subtitle mb-2 text-muted">{{member.role}}</h6>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col py-2 px-lg-3">
+                            <a class="card-a" href={{member.linkedin}}><i class="fab fa-linkedin fa-2x"></i></a>
+                        </div>
+                        <div class="col py-2 px-lg-3">
+                            <a class="card-a" href={{member.github}}><i class="fab fa-github-square fa-2x"></i></a>
+                        </div>    
+                        <div class="col py-2 px-lg-3">
+                            <a class="card-a" href={{member.twitter}}><i class="fab fa-twitter-square fa-2x"></i></a>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,7 +3,8 @@ body {
 	margin: 0;
 	<!-- background: #222; -->
 	font-family: 'Work Sans', sans-serif;
-	font-weight: 800;
+  font-weight: 800;
+  margin-bottom:70px;
 }
 
 .container {
@@ -80,4 +81,16 @@ nav a:hover::before {
   background-color: #55d6aa;;
   color: white;
   text-align: center;
+}
+
+.card-a{
+  color: #444;
+}
+
+.card-a:hover{
+  color: #55d6aa;
+}
+
+.card-subtitle{
+  font-style: italic;
 }
