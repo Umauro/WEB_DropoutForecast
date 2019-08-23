@@ -1,76 +1,247 @@
+<style media="screen">
+  /* Team Member CSS
+===========================*/
 
-<div class="container text-center">
-    <h1 class="text-center pt-5 pd-5">El equipo detrás de Dropout Forecast</h1>
-    <img src="../img/FROGWARE.png" class="pt-3 pb-3" style="width: 30rem;">
-    <div class="row justify-content-md-center text-center">
-        <div id="carouselExampleControls" class="carousel slide" data-interval=1000 data-ride="false" data-pause=true>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev" target="_self">
-                <span class="fas fa-arrow-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
+h1.team-h1 {
+  margin: 0x;
+  position: absolute;
+  top: -16px;
+  text-align: center;
+  left: 35%;
+  font-family:
+  font-style: italic;
+  background-color: white;
+  padding: 0px 20px;
+  color: #222;
+}
 
-            <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active" data-interval=1000>
-                    <div class="row justify-content-md-center text-center">
-                        <div class="col" ng-repeat="member in team_members" ng-if="$index < 3">
-                            <div class="card text-center" style="width:18rem;">
-                                <img src="{{'../img/' + member.img}}" class="card-img-top img-thumbnail" alt="Card image">
-                                <div class="card-body">
-                                    <div class="card-title">
-                                        {{member.name}}
-                                    </div>
-                                    <h6 class="card-subtitle mb-2 text-muted">{{member.role}}</h6>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="row">
-                                        <div class="col py-2 px-lg-3">
-                                            <a class="card-a" href={{member.linkedin}}><i class="fab fa-linkedin fa-2x"></i></a>
-                                        </div>
-                                        <div class="col py-2 px-lg-3">
-                                            <a class="card-a" href={{member.github}}><i class="fab fa-github-square fa-2x"></i></a>
-                                        </div>
-                                        <div class="col py-2 px-lg-3">
-                                            <a class="card-a" href={{member.twitter}}><i class="fab fa-twitter-square fa-2x"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item" data-interval=1000>
-                    <div class="row justify-content-md-center text-center">
-                        <div class="col" ng-repeat="member in team_members" ng-if="$index > 2">
-                            <div class="card text-center"  ng-class="{ invisible:$index===4}" style="width:18rem;">
-                                <img src="{{'../img/' + member.img}}" class="card-img-top img-thumbnail" alt="Card image">
-                                <div class="card-body">
-                                    <div class="card-title">
-                                        {{member.name}}
-                                    </div>
-                                    <h6 class="card-subtitle mb-2 text-muted">{{member.role}}</h6>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="row">
-                                        <div class="col py-2 px-lg-3">
-                                            <a class="card-a" href={{member.linkedin}}><i class="fab fa-linkedin fa-2x"></i></a>
-                                        </div>
-                                        <div class="col py-2 px-lg-3">
-                                            <a class="card-a" href={{member.github}}><i class="fab fa-github-square fa-2x"></i></a>
-                                        </div>
-                                        <div class="col py-2 px-lg-3">
-                                            <a class="card-a" href={{member.twitter}}><i class="fab fa-twitter-square fa-2x"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next" target="_self">
-                <span class="fas fa-arrow-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: auto;
+
+  border-bottom: 1px #e9e9e9 solid;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  margin-top: 5em;
+  position: relative;
+}
+
+.team-member {
+  width: 16%;
+  float: left;
+  text-align: center;
+  margin-right: 5%;
+  margin-top: 5em;
+}
+
+.team-member:last-child {margin-right: 0;}
+
+
+.team-member span,
+.team-member h3 {
+  max-width: 200px;
+  font-family: sans-serif;
+  letter-spacing: -1px;
+}
+
+.team-member h3 {
+  color: #1CA3A3;
+}
+
+.email {
+  color: #EA2678;
+
+}
+
+.team-member span {
+  display: block;
+
+}
+.team-photo {
+  border-radius: 50%;
+  text-align: center;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  transition: 0.1s transform ease-in-out;
+}
+
+
+.team-photo:hover {
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+
+/* code for phone layout */
+@media (max-width:850px){
+  .team-member {
+    width:25%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 40px;
+
+  }
+
+}
+
+
+
+@media (max-width:650px){
+  .team-member {
+    float: none;
+    display: block;
+    margin: 50px auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .team-member h3,
+  .team-member span {
+    margin: 15px auto;
+  }
+}
+
+
+/* ENDS Team Member CSS
+===========================*/
+</style>
+
+<!-- this section wraps the team members as a container-->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">s
+<!------ Include the above in your HEAD tag ---------->
+
+
+<section class="cf team-container">
+  <h1 class="team-h1">Nuestro Equipo</h1>
+
+    <!-- member-->
+    <div class="team-member">
+      <img class="team-photo" src="http://square-vn.com/app/dscms/assets/images/person-4.jpg?v=1495618120">
+      <h3>Andrés Huerta</h3>
+      <span>Scrum Master - Backend Developer</span>
+      <ul class="list-unstyled mb-0">
+        <!-- Facebook -->
+        <a href="www.facebook.com"class="p-2 fa-lg fb-ic">
+          <i class="fab fa-facebook-f blue-text"> </i>
+        </a>
+        <!-- Twitter -->
+        <a class="p-2 fa-lg li-ic">
+          <i class="fab fa-linkedin blue-text"> </i>
+        </a>
+        <!-- Instagram -->
+        <a class="p-2 fa-lg ins-ic">
+          <i class="fab fa-instagram blue-text"> </i>
+        </a>
+      </ul>
     </div>
-</div>
+
+
+    <!-- member-->
+    <div class="team-member">
+    <img class="team-photo" src="http://square-vn.com/app/dscms/assets/images/person-4.jpg?v=1495618120">
+      <h3>Ignacio Salas</h3>
+      <span>Jefe Técnico - Full Stack Developer</span>
+      <ul class="list-unstyled mb-0">
+        <!-- Facebook -->
+        <a href="www.facebook.com"class="p-2 fa-lg fb-ic">
+          <i class="fab fa-facebook-f blue-text"> </i>
+        </a>
+        <!-- Twitter -->
+        <a class="p-2 fa-lg li-ic">
+          <i class="fab fa-linkedin blue-text"> </i>
+        </a>
+        <!-- Instagram -->
+        <a class="p-2 fa-lg ins-ic">
+          <i class="fab fa-instagram blue-text"> </i>
+        </a>
+      </ul>
+    </div>
+
+
+    <!-- member-->
+    <div class="team-member">
+    <img class="team-photo" src="http://square-vn.com/app/dscms/assets/images/person-4.jpg?v=1495618120">
+      <h3>Felipe Vásquez</h3>
+      <span>Jefe Proyecto - Backend Developer</span>
+      <ul class="list-unstyled mb-0">
+        <!-- Facebook -->
+        <a href="www.facebook.com"class="p-2 fa-lg fb-ic">
+          <i class="fab fa-facebook-f blue-text"> </i>
+        </a>
+        <!-- Twitter -->
+        <a class="p-2 fa-lg li-ic">
+          <i class="fab fa-linkedin blue-text"> </i>
+        </a>
+        <!-- Instagram -->
+        <a class="p-2 fa-lg ins-ic">
+          <i class="fab fa-instagram blue-text"> </i>
+        </a>
+      </ul>
+    </div>
+
+
+
+    <!-- member-->
+    <div class="team-member">
+    <img class="team-photo" src="http://square-vn.com/app/dscms/assets/images/person-4.jpg?v=1495618120">
+      <h3>Felipe Vega</h3>
+      <span>Machine Learning Engineer - Backend Developer</span>
+      <ul class="list-unstyled mb-0">
+        <!-- Facebook -->
+        <a href="www.facebook.com"class="p-2 fa-lg fb-ic">
+          <i class="fab fa-facebook-f blue-text"> </i>
+        </a>
+        <!-- Twitter -->
+        <a class="p-2 fa-lg li-ic">
+          <i class="fab fa-linkedin blue-text"> </i>
+        </a>
+        <!-- Instagram -->
+        <a class="p-2 fa-lg ins-ic">
+          <i class="fab fa-instagram blue-text"> </i>
+        </a>
+      </ul>
+    </div>
+
+
+    <!-- member-->
+    <div class="team-member">
+    <img class="team-photo" src="http://square-vn.com/app/dscms/assets/images/person-4.jpg?v=1495618120">
+      <h3>Víctor Zavala</h3>
+      <span>Jefe Marketing - Frontend Developer</span>
+      <ul class="list-unstyled mb-0">
+        <!-- Facebook -->
+        <a href="www.facebook.com"class="p-2 fa-lg fb-ic">
+          <i class="fab fa-facebook-f blue-text"> </i>
+        </a>
+        <!-- Twitter -->
+        <a class="p-2 fa-lg li-ic">
+          <i class="fab fa-linkedin blue-text"> </i>
+        </a>
+        <!-- Instagram -->
+        <a class="p-2 fa-lg ins-ic">
+          <i class="fab fa-instagram blue-text"> </i>
+        </a>
+      </ul>
+    </div>
+
+ </section>
