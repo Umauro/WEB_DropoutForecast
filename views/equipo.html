@@ -8,11 +8,14 @@ h1.team-h1 {
   top: -16px;
   text-align: center;
   left: 35%;
-  font-family:
-  font-style: italic;
+  font-family: Montserrat-Regular;
   background-color: white;
   padding: 0px 20px;
   color: #222;
+}
+
+a{
+  color:#35464E;
 }
 
 .cf:before,
@@ -38,9 +41,9 @@ h1.team-h1 {
   margin: auto;
 
   border-bottom: 1px #e9e9e9 solid;
-  padding-top: 5em;
-  padding-bottom: 5em;
-  margin-top: 5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-top: 1em;
   position: relative;
 }
 
@@ -58,12 +61,12 @@ h1.team-h1 {
 .team-member span,
 .team-member h3 {
   max-width: 200px;
-  font-family: sans-serif;
+  font-family: Montserrat-Regular;
   letter-spacing: -1px;
 }
 
 .team-member h3 {
-  color: #1CA3A3;
+  color:  #30B19D;;
 }
 
 .email {
@@ -124,124 +127,38 @@ h1.team-h1 {
 /* ENDS Team Member CSS
 ===========================*/
 </style>
+<div class="container text-center pt-3 pb-5">
+	<div class="row pt-5">
+		<div class="col">
+			<img src="../img/Frogware.png" style="width: 50%">    
+		</div>
+	</div>
+	<div class="row">
+			<p>Somos un grupo de amigos de la Universidad Técnica Santa María, con gran interés en el Anime, los memes y las canciones Mashup de la internet</p>
+	</div>
+	<div class="row">
+		<div class="team-member" ng-repeat="member in team_members">
+			<a role="button" data-toggle="modal" data-target="{{$index}}">
+			<img class="team-photo" src="{{'../img/' + member.img}}">
+			</a>
+			<h3>{{member.name}}</h3>
+			<span>{{member.role}}</span>
+			<span>{{member.subrole}}</span>
+			<ul class="list-unstyled mb-0">
+		    	<!-- Linkedin -->
+		 		<a href="{{member.linkedin}}"class="p-2 fa-lg fb-ic">
+					<i class="fab fa-linkedin"> </i>
+				</a>
+				<!-- Github -->
+				<a href="{{member.github}}"class="p-2 fa-lg li-ic">
+					<i class="fab fa-github-square"> </i>
+				</a>
+				<!-- Instagram -->
+				<a href="{{member.instagram}}" class="p-2 fa-lg ins-ic">
+					<i class="fab fa-instagram"> </i>
+				</a>
+			</ul>
+		</div>	
+	</div>
+</div>
 
-<!-- this section wraps the team members as a container-->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">s
-<!------ Include the above in your HEAD tag ---------->
-
-
-<section class="cf team-container">
-  <h1 class="team-h1">Nuestro Equipo</h1>
-
-    <!-- member-->
-    <div class="team-member">
-      <img class="team-photo" src="http://square-vn.com/app/dscms/assets/images/person-4.jpg?v=1495618120">
-      <h3>Andrés Huerta</h3>
-      <span>Scrum Master - Backend Developer</span>
-      <ul class="list-unstyled mb-0">
-        <!-- Facebook -->
-        <a href="www.facebook.com"class="p-2 fa-lg fb-ic">
-          <i class="fab fa-facebook-f blue-text"> </i>
-        </a>
-        <!-- Twitter -->
-        <a class="p-2 fa-lg li-ic">
-          <i class="fab fa-linkedin blue-text"> </i>
-        </a>
-        <!-- Instagram -->
-        <a class="p-2 fa-lg ins-ic">
-          <i class="fab fa-instagram blue-text"> </i>
-        </a>
-      </ul>
-    </div>
-
-
-    <!-- member-->
-    <div class="team-member">
-    <img class="team-photo" src="http://square-vn.com/app/dscms/assets/images/person-4.jpg?v=1495618120">
-      <h3>Ignacio Salas</h3>
-      <span>Jefe Técnico - Full Stack Developer</span>
-      <ul class="list-unstyled mb-0">
-        <!-- Facebook -->
-        <a href="www.facebook.com"class="p-2 fa-lg fb-ic">
-          <i class="fab fa-facebook-f blue-text"> </i>
-        </a>
-        <!-- Twitter -->
-        <a class="p-2 fa-lg li-ic">
-          <i class="fab fa-linkedin blue-text"> </i>
-        </a>
-        <!-- Instagram -->
-        <a class="p-2 fa-lg ins-ic">
-          <i class="fab fa-instagram blue-text"> </i>
-        </a>
-      </ul>
-    </div>
-
-
-    <!-- member-->
-    <div class="team-member">
-    <img class="team-photo" src="http://square-vn.com/app/dscms/assets/images/person-4.jpg?v=1495618120">
-      <h3>Felipe Vásquez</h3>
-      <span>Jefe Proyecto - Backend Developer</span>
-      <ul class="list-unstyled mb-0">
-        <!-- Facebook -->
-        <a href="www.facebook.com"class="p-2 fa-lg fb-ic">
-          <i class="fab fa-facebook-f blue-text"> </i>
-        </a>
-        <!-- Twitter -->
-        <a class="p-2 fa-lg li-ic">
-          <i class="fab fa-linkedin blue-text"> </i>
-        </a>
-        <!-- Instagram -->
-        <a class="p-2 fa-lg ins-ic">
-          <i class="fab fa-instagram blue-text"> </i>
-        </a>
-      </ul>
-    </div>
-
-
-
-    <!-- member-->
-    <div class="team-member">
-    <img class="team-photo" src="http://square-vn.com/app/dscms/assets/images/person-4.jpg?v=1495618120">
-      <h3>Felipe Vega</h3>
-      <span>Machine Learning Engineer - Backend Developer</span>
-      <ul class="list-unstyled mb-0">
-        <!-- Facebook -->
-        <a href="www.facebook.com"class="p-2 fa-lg fb-ic">
-          <i class="fab fa-facebook-f blue-text"> </i>
-        </a>
-        <!-- Twitter -->
-        <a class="p-2 fa-lg li-ic">
-          <i class="fab fa-linkedin blue-text"> </i>
-        </a>
-        <!-- Instagram -->
-        <a class="p-2 fa-lg ins-ic">
-          <i class="fab fa-instagram blue-text"> </i>
-        </a>
-      </ul>
-    </div>
-
-
-    <!-- member-->
-    <div class="team-member">
-    <img class="team-photo" src="http://square-vn.com/app/dscms/assets/images/person-4.jpg?v=1495618120">
-      <h3>Víctor Zavala</h3>
-      <span>Jefe Marketing - Frontend Developer</span>
-      <ul class="list-unstyled mb-0">
-        <!-- Facebook -->
-        <a href="www.facebook.com"class="p-2 fa-lg fb-ic">
-          <i class="fab fa-facebook-f blue-text"> </i>
-        </a>
-        <!-- Twitter -->
-        <a class="p-2 fa-lg li-ic">
-          <i class="fab fa-linkedin blue-text"> </i>
-        </a>
-        <!-- Instagram -->
-        <a class="p-2 fa-lg ins-ic">
-          <i class="fab fa-instagram blue-text"> </i>
-        </a>
-      </ul>
-    </div>
-
- </section>
