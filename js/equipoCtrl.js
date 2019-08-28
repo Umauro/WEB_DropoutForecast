@@ -35,7 +35,7 @@ angular.module('web_dropoutforecast').controller('equipoCtrl',['$scope',function
         },
         {
             name:'Felipe Vega',
-            role:'Machine Learning Engineer',
+            role:'ML Engineer',
             subrole:'Backend Developer',
             description:'niño modelo',
             linkedin:'https://www.linkedin.com/in/felipe-vega-valencia-1b2a33181/',
@@ -45,7 +45,7 @@ angular.module('web_dropoutforecast').controller('equipoCtrl',['$scope',function
             instagram:'https://www.instagram.com/pipexxgfx/'
         },
         {
-            name:'Victor Zavala',
+            name:'Víctor Zavala',
             role:'Jefe Marketing',
             subrole:'Frontend Developer',
             description:'niño frontend',

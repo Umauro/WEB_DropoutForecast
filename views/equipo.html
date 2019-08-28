@@ -37,7 +37,7 @@ a{
 }
 
 .team-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 
   border-bottom: 1px #e9e9e9 solid;
@@ -52,7 +52,7 @@ a{
   float: left;
   text-align: center;
   margin-right: 5%;
-  margin-top: 5em;
+  margin-top: 7em;
 }
 
 .team-member:last-child {margin-right: 0;}
@@ -128,15 +128,7 @@ a{
 ===========================*/
 </style>
 <div class="container text-center pt-3 pb-5">
-	<div class="row pt-5">
-		<div class="col">
-			<img src="../img/Frogware.png" style="width: 50%">    
-		</div>
-	</div>
-	<div class="row">
-			<p>Somos un grupo de amigos de la Universidad Técnica Santa María, con gran interés en el Anime, los memes y las canciones Mashup de la internet</p>
-	</div>
-	<div class="row">
+  <div class="row">
 		<div class="team-member" ng-repeat="member in team_members">
 			<a role="button" data-toggle="modal" data-target="{{$index}}">
 			<img class="team-photo" src="{{'../img/' + member.img}}">
@@ -158,7 +150,15 @@ a{
 					<i class="fab fa-instagram"> </i>
 				</a>
 			</ul>
-		</div>	
+		</div>
 	</div>
-</div>
+	<div class="row pt-5">
+		<div class="col">
+			<img src="../img/Frogware.png" style="width: 50%">
+		</div>
+	</div>
+	<div class="row">
+			<p>Somos un grupo de amigos de la Universidad Técnica Santa María, con gran interés en el Anime, los memes y las canciones Mashup de la internet</p>
+	</div>
 
+</div>
