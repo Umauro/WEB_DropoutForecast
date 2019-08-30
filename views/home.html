@@ -627,6 +627,37 @@ p {
   left: auto;
   background-color: #0067f4; }
 
+  .column {
+  	flex: 1;
+  	border: 0px ;
+  	margin: 10px;
+  	padding: 10px;
+  	&:first-child { margin-left: 0; }
+  	&:last-child { margin-right: 0; }
+
+  }
+
+  @media screen and (max-width: 1200px) {
+    .columns .column {
+  		margin-bottom: 5px;
+      flex-basis: 40%;
+  		&:nth-last-child(2) {
+  			margin-right: 0;
+  		}
+  		&:last-child {
+  			flex-basis: 100%;
+  			margin: 0;
+  		}
+  	}
+  }
+
+  @media screen and (max-width: 680px) {
+  	.columns .column {
+  		flex-basis: 100%;
+  		margin: 0 0 5px 0;
+  	}
+  }
+
 .single-pricing.enterprise .pricing-flower {
   position: absolute;
   top: 10px;
@@ -670,6 +701,25 @@ p {
     height: 100%;
     object-fit: cover;
     object-position: center center; }
+
+    #middle {
+        margin-right: auto;
+        margin-left: auto;
+        width: 70%;
+        height: 400px;
+        margin-top: 65px;
+        border:3px solid #fff;
+        background-color:#fff;
+        }
+
+    #middlecontent {
+        font: normal 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+        padding: 10px;
+    }
+
+    #goomap {
+    float:right;
+    }
 
 .call-action-content {
   max-width: 560px;
@@ -947,6 +997,13 @@ p.form-message.error {
 .footer-copyright {
   background-color: #2b354f; }
 
+  .columns {
+  	display: flex;
+  	flex-flow: row wrap;
+  	justify-content: center;
+  	margin: 10px 0;
+  }
+
 .copyright {
   padding: 23px 0; }
   .copyright .text {
@@ -1019,9 +1076,9 @@ p.form-message.error {
                 <div class="col-xl-8 col-lg-10">
                     <div class="header-content text-center">
                         <img src="../img/logo3.png" style="width:100%; margin-bottom:5%">
-                        <p class="text">Detecta con antelación a aquellos alumnos que podrían desertar durante el primer año, descubre cuales son las principales causas y toma medidas correctivas.</p>
+                        <p class="text" style="color:black;">Detecta con antelación a aquellos alumnos que podrían desertar durante el primer año, descubre cuales son las principales causas y toma medidas correctivas.</p>
                         <ul class="header-btn">
-                            <li><a class="main-btn btn-one" href="#/contacto">Contáctate </a></li>
+                            <li style="margin-top:5%;"><a class="main-btn btn-one" href="#/contacto">Contáctate </a></li>
                             <li><a class="main-btn btn-two video-popup" href="https://youtu.be/z0U6TpOcPcQ">Ver video <i class="lni-play"></i></a></li>
                         </ul>
                     </div> <!-- header content -->
@@ -1031,8 +1088,13 @@ p.form-message.error {
 
 	</div>
 
+
+
     <section id="service" class="services-area">
-      <div class="container">
+
+
+
+      <div class="container" style="margin-bottom:10%;">
             <div class="row justify-content-center">
 
                 <div class="col-lg-6">
@@ -1044,33 +1106,73 @@ p.form-message.error {
                 </div>
             </div> <!-- row -->
             </br> </br> </br>
-             <p align="center" align="justify" > <img src="img/Frogware.png" style="max-width:50%;" align="left"> </br> </br> Frogware le pone, explicar </p>
+             <p  align="justify" style="color:black;" > <img src="img/Frogware.png" style="max-width:50%;" align="left"> </br> </br> Frogware es una pre-empresa conformada por 5 estudiantes de Ingeniería Civil Informática, siendo un equipo dedicado al desarrollo de soluciones informáticas con competencias en desarrollo de páginas web y técnicas de aprendizaje   </p>
+
+
+
         </div> <!-- conteiner -->
+<div class="container" style="margin-bottom:10%;">
+        <section class="columns">
+
+          <div class="column">
+            <h2 style="color:black; font-size:35px;">Misión</h2>
+            <p style="text-align: justify; color:black" ">Ayudar a las instituciones de educación superior con soluciones tecnológicas innovadoras, permitiéndoles lograr un alto desempeño en el cumplimiento de su plan estratégico.  Esto mediante la detección previa de aquellos alumnos que podrían desertar durante el primer año de carrera, indicando además las razones por la que se produce tal predicción.</p>
+          </div>
+
+          <div class="column">
+            <h2 style="color:black; font-size:35px;">Visión</h2>
+            <p style="text-align: justify; color:black" ">Ser la principal pre-empresa elegida por las instituciones educativas con la meta de reducir la deserción en las instituciones de educación superior a nivel nacional.</p>
+          </div>
+
+          <div class="column">
+            <h2 style="color:black; font-size:35px;">Innovación</h2>
+            <p style="text-align: justify; color:black" ">DropoutForecast se apoya en información pasada y personal de los alumnos para generar sus predicciones, abriendo oportunidades de visualización que carecen otras aplicaciones del mercado actual, tales como la representación de trayectorias estudiantiles en el perfil de alumnos en riesgo, además de entregar predicciones desde la primera etapa del período de clases.</p>
+          </div>
+
+        </section>
+</div> <!-- conteiner -->
     </section>
 
-	<section id="service" class="services-area"></section>
+
 		<div class="container text-center">
 			<div class="row">
 				<div class="col">
 					<div class="header-content text-center">
 						<div class="section-title pb-10">
-						<h1 class="header-title"> Visítanos</h1>
+						<h4 class="title" > Visítanos</h4>
 						</div>
-						<p class="text">
-							Estaremos en la <b>XXVII Feria de Software</b> de la <b>Universidad Técnica Santa María</b>.
-							Esta se realizará el día 22 de Noviembre del 2019 en la Casa Central.<br>
-							<b>¡Te Esperamos!</b>
-						</p>
+
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col">
-					#HERE HE NEED A MAP
-				</div>
+
 			</div>
 		</div>
-	</section>
+
+    <div id="middle" style= "margin-bottom:10%;">
+<div id="goomap">
+</p>
+<!--map start-->
+<!--Positions map in page -->
+<iframe width="625" height="330" float="right" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.8060987263916!2d-71.59897344883674!3d-33.03523858080103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e08fd59cf72f%3A0xd4edb558ea6e3929!2sUniversidad%20T%C3%A9cnica%20Federico%20Santa%20Mar%C3%ADa!5e0!3m2!1ses!2scl!4v1567108171093!5m2!1ses!2scl"></iframe>
+<br />
+<!--map end-->
+</div>
+  <div id="middlecontent">
+
+<p>
+  <p class="text" >
+    Estaremos en la <b>XXVII Feria de Software</b> de la <b>Universidad Técnica <br> Federico Santa María</b>.
+    <br>
+    <br>
+    Esta se realizará el día 22 de Noviembre del 2019 en la Casa Central.<br>
+    <br>
+    <b>¡Te Esperamos!</b>
+  </p>
+ </div>
+ </div>
+
 
 
 
