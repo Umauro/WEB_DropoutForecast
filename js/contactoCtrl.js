@@ -6,13 +6,26 @@ angular.module('web_dropoutforecast').controller('contactoCtrl',['$scope','$http
         'subject':"",
         'message':""
     };
-    $scope.message_res = "";
-
-    ctrl.send_contact_form = function(){
-        $http.post('/mail.php',data).then(function(res){
-            $scope.message = "Gracias por tu mensaje, pronto nos comunicaremos contigo";
+    $scope.flag = false;
+    $scope.send_contact_form = function(){
+        $http.post('http://localhost:80/dropoutforecast/mail.php',$scope.data).then(function(res){
+            if(res.data.status == 0){
+                $scope.flag = true;
+                $scope.message = {
+                    'bool':true
+                };
+            }
+            else{
+                $scope.message = {
+                    'bool':false
+                };
+            }
+            
         },function(res){
-            $scope.message = "Error al procesar el mensaje";
+            $scope.flag = true;
+            $scope.message = {
+                'bool':false
+            };
         });
     };
 }]);
