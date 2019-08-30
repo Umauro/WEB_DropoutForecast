@@ -22,7 +22,8 @@ web_dropoutforecast.config(function($routeProvider, $locationProvider){
         templateUrl: "views/proyecto.html"
     })
     .when("/contacto",{
-        templateUrl: "views/contacto.html"
+        templateUrl: "views/contacto.html",
+        controller: "contactoCtrl"
     })
     .when("/redes",{
         templateUrl: "views/redesociales.html",
