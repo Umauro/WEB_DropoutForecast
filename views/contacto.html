@@ -463,28 +463,28 @@ textarea.input1 + .shadow-input1 {
 				<img src="img/df.png" alt="IMG">
 			</div>
 
-			<form class="contact1-form validate-form">
+			<form class="contact1-form validate-form" ng-submit="send_contact_form()">
 				<span class="contact1-form-title">
 					Comunícate con nosotros
 				</span>
 
 				<div class="wrap-input1 validate-input" data-validate = "Name is required">
-					<input class="input1" type="text" name="name" placeholder="Nombre">
+					<input class="input1" type="text" name="name" ng-model="data.name" placeholder="Nombre">
 					<span class="shadow-input1"></span>
 				</div>
 
 				<div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<input class="input1" type="text" name="email" placeholder="Email">
+					<input class="input1" type="text" name="email" ng-model="data.email" placeholder="Email">
 					<span class="shadow-input1"></span>
 				</div>
 
 				<div class="wrap-input1 validate-input" data-validate = "Subject is required">
-					<input class="input1" type="text" name="subject" placeholder="Asunto">
+					<input class="input1" type="text" name="data.subject" ng-model="submit" placeholder="Asunto">
 					<span class="shadow-input1"></span>
 				</div>
 
 				<div class="wrap-input1 validate-input" data-validate = "Message is required">
-					<textarea class="input1" name="message" placeholder="Mensaje"></textarea>
+					<textarea class="input1" name="message" ng-model="data.message" placeholder="Mensaje"></textarea>
 					<span class="shadow-input1"></span>
 				</div>
 
