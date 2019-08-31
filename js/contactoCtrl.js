@@ -8,7 +8,7 @@ angular.module('web_dropoutforecast').controller('contactoCtrl',['$scope','$http
     };
     $scope.flag = false;
     $scope.send_contact_form = function(){
-        $http.post('http://localhost:80/dropoutforecast/mail.php',$scope.data).then(function(res){
+        $http.post('https://dropoutforecast.feriasoftware.cl/mail.php',$scope.data).then(function(res){
             if(res.data.status == 0){
                 $scope.flag = true;
                 $scope.message = {
